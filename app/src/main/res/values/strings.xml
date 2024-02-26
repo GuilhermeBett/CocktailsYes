@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">30_Days_Of_Cocktails</string>
+
+
+        <!-- Cocktail Descriptions -->
+        <string name="description_aperol_spritz">A popular Italian aperitif made with Aperol, Prosecco, and a splash of soda water, garnished with an orange slice.</string>
+        <string name="description_bellini">A refreshing Italian cocktail made with Prosecco and peach purée or peach nectar, served in a champagne flute.</string>
+        <string name="description_bloody_mary">A savory cocktail made with vodka, tomato juice, Worcestershire sauce, hot sauces, and various spices, often garnished with celery and a lemon wedge.</string>
+        <string name="description_blue_lagoon">A vibrant cocktail made with vodka, blue curaçao, lemonade, and sometimes lemon-lime soda, served over ice.</string>
+        <string name="description_caipirinha">A Brazilian cocktail made with cachaça (a sugarcane spirit), lime, and sugar, muddled together and served over ice.</string>
+        <string name="description_cosmopolitan">A vibrant cocktail made with vodka, triple sec, cranberry juice, and lime juice, often served in a martini glass with a lime wedge.</string>
+        <string name="description_daiquiri">A simple and refreshing cocktail made with white rum, lime juice, and simple syrup, often served straight up or on the rocks.</string>
+        <string name="description_espresso_martini">A caffeinated cocktail made with vodka, coffee liqueur, espresso, and simple syrup, served in a martini glass.</string>
+        <string name="description_french_75">A champagne cocktail made with gin, lemon juice, sugar, and topped with champagne, served in a flute glass.</string>
+        <string name="description_gin_and_tonic">A simple and refreshing cocktail made with gin, tonic water, and a slice of lime, served over ice.</string>
+        <string name="description_long_island_iced_tea">A potent cocktail made with vodka, rum, tequila, gin, triple sec, sour mix, and a splash of cola, garnished with a lemon wedge.</string>
+        <string name="description_mai_tai">A Polynesian-inspired cocktail made with rum, lime juice, orgeat syrup, and orange liqueur, often garnished with mint and a cherry.</string>
+        <string name="description_margarita">A popular Mexican cocktail made with tequila, triple sec, lime juice, and often served with a salt rim.</string>
+        <string name="description_martini">A classic cocktail made with gin and dry vermouth, typically garnished with an olive or lemon twist.</string>
+        <string name="description_mint_julep">A refreshing Southern cocktail made with bourbon, mint leaves, sugar, and crushed ice, traditionally served in a silver or pewter cup.</string>
+        <string name="description_mojito">A refreshing Cuban cocktail made with white rum, lime juice, fresh mint leaves, sugar, and soda water.</string>
+        <string name="description_moscow_mule">A zesty cocktail made with vodka, ginger beer, and lime juice, typically served in a copper mug.</string>
+        <string name="description_negroni">A classic Italian cocktail made with equal parts gin, Campari, and sweet vermouth, garnished with an orange peel.</string>
+        <string name="description_old_fashioned">A timeless cocktail made with whiskey, sugar, bitters, and a citrus peel garnish, often served over ice.</string>
+        <string name="description_paloma">A refreshing Mexican cocktail made with tequila, grapefruit soda (such as Jarritos or Squirt), lime juice, and sometimes a salt rim.</string>
+        <string name="description_pina_colada">A tropical cocktail made with rum, coconut cream, and pineapple juice, typically blended with ice until smooth.</string>
+        <string name="description_sazerac">A classic New Orleans cocktail made with rye whiskey, absinthe, Peychauds Bitters, and a sugar cube, garnished with a lemon twist.</string>
+        <string name="description_sidecar">A sophisticated cocktail made with brandy, orange liqueur, lemon juice, and sometimes sugar, served in a sugar-rimmed glass.</string>
+        <string name="description_singapore_sling">A fruity cocktail made with gin, cherry liqueur, triple sec, pineapple juice, lime juice, and grenadine, garnished with a cherry and a slice of pineapple.</string>
+        <string name="description_tequila_sunrise">A visually striking cocktail made with tequila, orange juice, and grenadine syrup, creating a gradient effect resembling a sunrise.</string>
+        <string name="description_tom_collins">A classic cocktail made with gin, lemon juice, simple syrup, and soda water, garnished with a lemon slice and a cherry.</string>
+        <string name="description_white_russian">A creamy cocktail made with vodka, coffee liqueur (such as Kahlúa), and cream or milk, served over ice.</string>
+        <string name="description_whiskey_sour">A classic cocktail made with whiskey, lemon juice, and simple syrup, sometimes garnished with a cherry and an orange slice.</string>
+
+    <!-- Cocktail Names -->
+    <string name="cocktail_aperol_spritz">Aperol Spritz</string>
+    <string name="cocktail_bellini">Bellini</string>
+    <string name="cocktail_bloody_mary">Bloody Mary</string>
+    <string name="cocktail_blue_lagoon">Blue Lagoon</string>
+    <string name="cocktail_caipirinha">Caipirinha</string>
+    <string name="cocktail_cosmopolitan">Cosmopolitan</string>
+    <string name="cocktail_daiquiri">Daiquiri</string>
+    <string name="cocktail_espresso_martini">Espresso Martini</string>
+    <string name="cocktail_french_75">French 75</string>
+    <string name="cocktail_gin_and_tonic">Gin and Tonic</string>
+    <string name="cocktail_long_island_iced_tea">Long Island Iced Tea</string>
+    <string name="cocktail_mai_tai">Mai Tai</string>
+    <string name="cocktail_margarita">Margarita</string>
+    <string name="cocktail_martini">Martini</string>
+    <string name="cocktail_mint_julep">Mint Julep</string>
+    <string name="cocktail_mojito">Mojito</string>
+    <string name="cocktail_moscow_mule">Moscow Mule</string>
+    <string name="cocktail_negroni">Negroni</string>
+    <string name="cocktail_old_fashioned">Old Fashioned</string>
+    <string name="cocktail_paloma">Paloma</string>
+    <string name="cocktail_pina_colada">Piña Colada</string>
+    <string name="cocktail_sazerac">Sazerac</string>
+    <string name="cocktail_sidecar">Sidecar</string>
+    <string name="cocktail_singapore_sling">Singapore Sling</string>
+    <string name="cocktail_tequila_sunrise">Tequila Sunrise</string>
+    <string name="cocktail_tom_collins">Tom Collins</string>
+    <string name="cocktail_white_russian">White Russian</string>
+    <string name="cocktail_whiskey_sour">Whiskey Sour</string>
+
+
+
+
+    </resources>
