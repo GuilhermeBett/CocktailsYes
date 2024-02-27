@@ -3,17 +3,14 @@ package com.example.cocktailyes.ui
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
@@ -26,7 +23,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -47,66 +43,66 @@ fun Cocktail_Details(
     }
     val scrollState = rememberScrollState()
 
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(color = Color(0xFFD0BCFF))) {
+
+    Box(modifier.background(Color(0xFFFFE0D5))) {
         Column(
             modifier = modifier
                 .fillMaxSize()
                 .verticalScroll(state = scrollState)
         ) {
             Surface(
-                color = Color(0xFFEFB8C8),
+                color = Color(0xFFFFF7D9), // Lighter surface for readability
                 modifier = modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 84.dp)
+                    .padding(horizontal = 16.dp, vertical = 16.dp) // Reduced padding
                     .shadow(elevation = 2.dp)
             ) {
                 Column(
                     modifier = modifier.padding(16.dp)
                 ) {
-                    Row(
-                        modifier = modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                    ) {
-                        Text(
-                            text = stringResource(chosenCocktail.nameRes),
-                            modifier = modifier.padding(start = 90.dp),
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
 
-
-                            )
-
-                    }
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Image(
-                        painter = painterResource(chosenCocktail.imageRes),
-                        contentDescription = chosenCocktail.nameRes.toString(),
-                        modifier = modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(140.dp)),
-                        contentScale = ContentScale.FillWidth
-
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
                     Text(
-                        text = stringResource(chosenCocktail.descriptionRes),
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.padding(
-                            vertical = 24.dp,
-                            horizontal = 40.dp
-                        )
+                        text = stringResource(chosenCocktail.nameRes),
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
                     )
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    // Wrap image and text in a centered column
+                    Column(
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    ) {
+                        Image(
+                            painter = painterResource(chosenCocktail.imageRes),
+                            contentDescription = chosenCocktail.nameRes.toString(),
+                            modifier = modifier
+                                .fillMaxWidth()
+                                .height(250.dp) // Adjust image height as needed
+                                .clip(RoundedCornerShape(140.dp)),
+                            contentScale = ContentScale.Fit
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = stringResource(chosenCocktail.descriptionRes),
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(horizontal = 16.dp) // Reduced padding
+                        )
+                    }
                 }
             }
         }
     }
+
 }
 
 
 @Preview(showBackground = true)
 @Composable
 fun Cocktail_DetailsPreview() {
-    Cocktail_Details(CocktailRepository.cocktails[18], onBackPressed = {})
+    Cocktail_Details(
+        CocktailRepository.cocktails[18],
+        onBackPressed = {},
+        modifier = Modifier.fillMaxSize()
+    )
 }

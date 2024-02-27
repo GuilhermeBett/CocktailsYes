@@ -8,7 +8,7 @@ object CocktailRepository {
     val cocktails = listOf(
         Cocktail(
             id = 1,
-            imageRes = R.drawable.mico,
+            imageRes = R.drawable.aperol_spritz,
             nameRes = R.string.cocktail_aperol_spritz,
             descriptionRes = R.string.description_aperol_spritz,
             alcoholLevel = AlcoholLevel.WEAK
