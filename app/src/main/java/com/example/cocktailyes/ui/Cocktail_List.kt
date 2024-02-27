@@ -42,7 +42,7 @@ fun CocktailList(
     onItemClick: (Cocktail) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    LazyColumn(verticalArrangement = Arrangement.spacedBy(16.dp), modifier = modifier.background(color = Color(0xFFCCC2DC))) {
+    LazyColumn(verticalArrangement = Arrangement.spacedBy(16.dp), modifier = modifier.background(color = Color(0xFFCCC2DC)).padding(16.dp)) {
         items(cocktails, key = { cocktail -> cocktail.id }) { cocktail ->
             Cocktail_Item(cocktail = cocktail, onItemClick = onItemClick)
         }
@@ -83,7 +83,7 @@ fun Cocktail_Item(
             Column(
                 modifier = Modifier
                     .align(Alignment.CenterVertically)
-                    .background(Color(0xFFD0BCFF))
+                    .background(Color(0xFFD0BCFD))
                     .weight(1f)
             ) {
                 Text(
@@ -108,13 +108,13 @@ fun Cocktail_Item(
                         text = "",
                         style = MaterialTheme.typography.bodySmall
                     )
-                    /*Spacer(Modifier.weight(1f))
-                    if (sport.olympic) {
+                    Spacer(Modifier.weight(1f))
                         Text(
-                            text = stringResource(R.string.olympic_caption),
-                            style = MaterialTheme.typography.labelMedium
+                            text = (cocktail.alcoholLevel.toString()),
+                            style = MaterialTheme.typography.labelSmall,
+                            modifier=modifier.padding(10.dp)
                         )
-                    }*/
+
                 }
             }
         }

@@ -9,7 +9,9 @@ import kotlinx.coroutines.flow.update
 
 class CocktailViewModel : ViewModel() {
 
-    private val _uiState = MutableStateFlow(CocktailUiState())
+    private val _uiState = MutableStateFlow(CocktailUiState( cocktailList = CocktailRepository.cocktails,
+        currentCocktail = CocktailRepository.cocktails[0]
+    ))
 
     val uiState: StateFlow<CocktailUiState> = _uiState
 
@@ -19,12 +21,15 @@ class CocktailViewModel : ViewModel() {
         }
     }
 
-    fun navigateToListPage(){
+    fun navigateToHome(){
+        _uiState.update { it.copy(isShowingHomePage = true) }
+    }
+
+    fun navigateToListPage() {
         _uiState.update { it.copy(isShowingListPage = true) }
     }
 
-
-    fun navigateToDetailPage(){
-        _uiState.update { it.copy(isShowingListPage = false, isShowingHomePage = false ) }
+    fun navigateToDetailPage() {
+        _uiState.update { it.copy(isShowingListPage = false, isShowingHomePage = false) }
     }
 }

@@ -6,7 +6,7 @@ import com.example.cocktailyes.data.CocktailRepository
 data class CocktailUiState(
     val cocktailList: List<Cocktail> = emptyList(),
     val currentCocktail: Cocktail = CocktailRepository.cocktails[0],
-    val isShowingListPage: Boolean = true,
-    val isShowingHomePage: Boolean = false
+    val isShowingListPage: Boolean = false,
+    val isShowingHomePage: Boolean = true,
 
 )
