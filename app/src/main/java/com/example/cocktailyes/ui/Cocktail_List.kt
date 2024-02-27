@@ -1,5 +1,7 @@
 package com.example.cocktailyes.ui
 
+import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -30,6 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.a30_days_of_cocktails.model.Cocktail
+import com.example.cocktailyes.data.AlcoholLevel
 import com.example.cocktailyes.data.CocktailRepository
 
 
@@ -39,12 +42,22 @@ import com.example.cocktailyes.data.CocktailRepository
 @Composable
 fun CocktailList(
     cocktails: List<Cocktail>,
+    alcoholLevel: AlcoholLevel,
     onItemClick: (Cocktail) -> Unit,
+    onBackPressed: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    LazyColumn(verticalArrangement = Arrangement.spacedBy(16.dp), modifier = modifier.background(color = Color(0xFFCCC2DC)).padding(16.dp)) {
-        items(cocktails, key = { cocktail -> cocktail.id }) { cocktail ->
-            Cocktail_Item(cocktail = cocktail, onItemClick = onItemClick)
+    BackHandler {
+        onBackPressed()
+    }
+    LazyColumn(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = modifier
+        .background(color = Color(0xFFCCC2DC))
+        .padding(16.dp)) {
+        items(cocktails) { cocktail ->
+            if (cocktail.alcoholLevel == alcoholLevel) {
+                Cocktail_Item(cocktail = cocktail, onItemClick = onItemClick)
+            }
+
         }
     }
 
@@ -124,6 +137,8 @@ fun Cocktail_Item(
 
 
 
+
+
 @Preview
 @Composable
 fun Cocktail_ItemPreview() {
@@ -133,5 +148,5 @@ fun Cocktail_ItemPreview() {
 @Preview(showBackground = true)
 @Composable
 fun CocktailListPreview() {
-    CocktailList(cocktails = CocktailRepository.cocktails, onItemClick = {})
+
 }
