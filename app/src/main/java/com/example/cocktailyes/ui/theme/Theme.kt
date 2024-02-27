@@ -15,6 +15,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
+import androidx.compose.ui.graphics.Color
+
+
+// Define Purple80
+val Purple80 = Color(0xFFD0BCFF)
+val Purple40 = Color(0xFF8168CF)
+val PurpleGrey80 = Color(0xFFCCC2DC)
+val PurpleGrey40 = Color(0xFF8E8E8E)
+val Pink80 = Color(0xFFF48FB1)
+val Pink40 = Color(0xFFF06292)
+
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
